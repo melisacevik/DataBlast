@@ -1,0 +1,46 @@
+
+Question 2
+
+2.1)
+SELECT COUNT(*) FROM CustomerLogins
+
+2.2)
+SELECT COUNT(*) FROM CustomerLogins
+WHERE LoginDate = '2015-05-01'
+
+2.3)
+Assuming that CustomerIDs are unique, we can solve it like this:
+
+SELECT Count(CustomerID) FROM CustomerLogin
+
+2.4)
+CREATE TABLE CustomerLogins (
+    CustomerID SERIAL PRIMARY KEY,
+    Name VARCHAR(255),
+    LoginDate DATE,
+    Platform VARCHAR(255)
+);
+
+2.5)
+I can interpret it assuming we have tables A and B:
+Table A has columns country_id, country_name, population.
+Table B has columns country_id, country_name, location.
+
+Inner Join: Gets the matching records of two tables. It brings the matching (intersection) records of table A and B and joins these tables.
+
+In other words, it will join by country_id and country_name and bring other columns.
+
+Outer Join:
+
+a) Left Join (Left Outer Join):
+Here it considers table A as the primary table and brings all records and matching table B records.
+If there is no matching record in table B, it is filled with NULL values.
+
+b) Right Join(Right Outer Join):
+Retrieves all records in table B and matching table A records.
+If there is no matching record in table A, it is filled with NULL values.
+
+c) Full Outer Join:
+Full outer join retrieves all records in tables A and B.
+If there is no matching record in one table, the corresponding field in the other table is filled with a NULL value.
+
