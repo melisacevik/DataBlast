@@ -32,6 +32,7 @@ def get_exchange_rates():
 
 get_exchange_rates()
 print(ourdata)
+
 with open('currencies.csv','w',encoding='UTF-8',newline='') as f:
     writer = csv.writer(f)
 
